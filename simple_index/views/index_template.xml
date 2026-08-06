@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="index_template" name="Simple Index Page">
+        <t t-call="website.layout">
+            <div id="wrap" class="container mt-5">
+                <h1>Index</h1>
+            </div>
+        </t>
+    </template>
+</odoo>
