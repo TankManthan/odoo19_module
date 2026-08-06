@@ -8,7 +8,7 @@ Simple Index
 A bare-bones Odoo 19 module containing only a single controller
 that renders an "index" page at /simple_index.
 """,
-    'author': 'Your Name',
+    'author': 'Tank Manthan',
     'category': 'Website',
     'license': 'LGPL-3',
     'depends': ['website'],
