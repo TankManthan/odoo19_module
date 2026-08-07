@@ -4,228 +4,515 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LinguaHub — Learn a New Language</title>
+    <title>Tank Manthan — Odoo App Store Manager & Module Developer</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Patrick+Hand&family=Architects+Daughter&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Patrick Hand', cursive;
+            background-color: #FBF3E3;
+            color: #2E2A26;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .sketchy-font {
+            font-family: 'Kalam', cursive;
+        }
+
+        .sketchy-border {
+            border: 2.5px solid #2E2A26;
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            background-color: #FFFDF8;
+        }
+
+        .sketchy-border-2 {
+            border: 2.5px solid #2E2A26;
+            border-radius: 12px 190px 12px 190px/190px 12px 190px 12px;
+            background-color: #FFFDF8;
+        }
+
+        .dashed-box {
+            border: 2px dashed #714B67;
+            border-radius: 18px;
+        }
+
+        .icon-doodle {
+            width: 62px;
+            height: 62px;
+            border: 2.5px solid #2E2A26;
+            border-radius: 50% 50% 48% 52%/55% 48% 52% 45%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #FFF3DE;
+            font-size: 24px;
+            color: #714B67;
+        }
+
+        .btn-sketchy {
+            font-family: 'Kalam', cursive;
+            font-weight: 700;
+            border: 2.5px solid #2E2A26;
+            border-radius: 225px 15px 225px 15px/15px 225px 15px 225px;
+            background-color: #FFB74D;
+            color: #2E2A26;
+            padding: 10px 30px;
+        }
+
+        .btn-sketchy:hover {
+            background-color: #FFA726;
+            color: #2E2A26;
+        }
+
+        .tape {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-3deg);
+            width: 70px;
+            height: 24px;
+            background-color: rgba(255, 183, 77, 0.6);
+            border: 1px dashed #2E2A26;
+        }
+
+        .divider-sketch {
+            width: 100%;
+            height: 18px;
+        }
+
+        .section-title-underline {
+            display: inline-block;
+            position: relative;
+        }
+
+        .section-title-underline svg {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .badge-sketch {
+            border: 2px solid #714B67;
+            border-radius: 20px;
+            color: #714B67;
+            font-family: 'Architects Daughter', cursive;
+            font-size: 13px;
+            padding: 4px 14px;
+            background-color: #F3E9F2;
+        }
+
+        .polaroid {
+            background-color: #FFFDF8;
+            border: 2.5px solid #2E2A26;
+            border-radius: 6px;
+            padding: 10px 10px 20px 10px;
+        }
+
+        .form-control-sketch {
+            border: 2px solid #2E2A26;
+            border-radius: 10px;
+            background-color: #FFFDF8;
+            font-family: 'Patrick Hand', cursive;
+        }
+
+        .navbar-sketch {
+            background-color: #FFFDF8;
+            border-bottom: 3px solid #2E2A26;
+        }
+
+        .nav-link-sketch {
+            color: #2E2A26 !important;
+            font-family: 'Kalam', cursive;
+            font-weight: 700;
+        }
+
+        .stamp {
+            border: 2.5px dashed #714B67;
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(-8deg);
+            color: #714B67;
+            font-family: 'Architects Daughter', cursive;
+            font-size: 12px;
+            text-align: center;
+            line-height: 1.1;
+        }
+    </style>
 </head>
 
-<body style="font-family: 'Segoe UI', Arial, sans-serif; color: #2d2d2d; background-color: #ffffff;">
+<body>
 
     <!-- HEADER -->
-    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #1f2a44; padding: 18px 30px;">
-        <a class="navbar-brand" href="#" style="font-weight: 700; font-size: 24px; color: #ffffff;">Lingua<span
-                style="color: #ffb347;">Hub</span></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu">
-            <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-md navbar-sketch" style="padding: 16px 30px;">
+        <a class="navbar-brand sketchy-font" href="#home" style="font-weight: 700; font-size: 26px; color: #2E2A26;">
+            <i class="fa-solid fa-pen-nib" style="color:#714B67;"></i> Manthan<span style="color:#714B67;">.Odoo</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu"
+            style="border: 2px solid #2E2A26;">
+            <i class="fa-solid fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navMenu">
-            <ul class="navbar-nav ml-auto" style="gap: 10px;">
-                <li class="nav-item"><a class="nav-link" href="#home" style="color: #ffffff;">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#languages" style="color: #ffffff;">Languages</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about" style="color: #ffffff;">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#faq" style="color: #ffffff;">FAQ</a></li>
-                <li class="nav-item">
-                    <a class="btn" href="#signup"
-                        style="background-color: #ffb347; color: #1f2a44; font-weight: 600; padding: 6px 20px; border-radius: 20px; margin-left: 10px;">Get
-                        Started</a>
-                </li>
+            <ul class="navbar-nav ml-auto" style="gap: 22px;">
+                <li class="nav-item"><a class="nav-link nav-link-sketch" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-sketch" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-sketch" href="#modules">Modules</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-sketch" href="#works">My Works</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-sketch" href="#faq">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-sketch" href="#feedback">Feedback</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- HERO -->
     <div id="home"
-        style="background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; padding: 100px 20px; text-align: center;">
-        <div
-            style="background-color: rgba(31,42,68,0.65); padding: 60px 20px; border-radius: 8px; max-width: 800px; margin: 0 auto;">
-            <h1 style="color: #ffffff; font-weight: 800; font-size: 46px; margin-bottom: 20px;">Speak the World's
-                Languages</h1>
-            <p style="color: #f0f0f0; font-size: 18px; margin-bottom: 30px;">Join thousands of learners exploring new
-                cultures, one word at a time.</p>
-            <a href="#languages" class="btn btn-lg"
-                style="background-color: #ffb347; color: #1f2a44; font-weight: 700; padding: 12px 36px; border-radius: 30px;">Start
-                Learning</a>
-        </div>
-    </div>
-
-    <!-- LANGUAGES SECTION -->
-    <div id="languages" style="padding: 80px 20px; background-color: #f7f8fa;">
-        <div class="container">
-            <h2 class="text-center" style="font-weight: 700; margin-bottom: 10px; color: #1f2a44;">Choose Your Language
-            </h2>
-            <p class="text-center" style="color: #6c757d; margin-bottom: 50px;">Pick from our most popular courses and
-                start your journey today.</p>
-            <div class="row">
-
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0 shadow-sm" style="border-radius: 12px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80"
-                            class="card-img-top" style="height: 200px; object-fit: cover;">
-                        <div class="card-body text-center">
-                            <h5 style="font-weight: 700; color: #1f2a44;">Spanish</h5>
-                            <p style="color: #6c757d; font-size: 14px;">Master conversational Spanish with native
-                                speakers.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0 shadow-sm" style="border-radius: 12px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=600&q=80"
-                            class="card-img-top" style="height: 200px; object-fit: cover;">
-                        <div class="card-body text-center">
-                            <h5 style="font-weight: 700; color: #1f2a44;">French</h5>
-                            <p style="color: #6c757d; font-size: 14px;">Learn the language of art, food, and romance.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0 shadow-sm" style="border-radius: 12px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=600&q=80"
-                            class="card-img-top" style="height: 200px; object-fit: cover;">
-                        <div class="card-body text-center">
-                            <h5 style="font-weight: 700; color: #1f2a44;">Japanese</h5>
-                            <p style="color: #6c757d; font-size: 14px;">Dive into Japanese culture, anime, and business.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0 shadow-sm" style="border-radius: 12px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80"
-                            class="card-img-top" style="height: 200px; object-fit: cover;">
-                        <div class="card-body text-center">
-                            <h5 style="font-weight: 700; color: #1f2a44;">German</h5>
-                            <p style="color: #6c757d; font-size: 14px;">Build a strong foundation in German grammar.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0 shadow-sm" style="border-radius: 12px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=600&q=80"
-                            class="card-img-top" style="height: 200px; object-fit: cover;">
-                        <div class="card-body text-center">
-                            <h5 style="font-weight: 700; color: #1f2a44;">Italian</h5>
-                            <p style="color: #6c757d; font-size: 14px;">Explore Italy through its beautiful language.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0 shadow-sm" style="border-radius: 12px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80"
-                            class="card-img-top" style="height: 200px; object-fit: cover;">
-                        <div class="card-body text-center">
-                            <h5 style="font-weight: 700; color: #1f2a44;">Mandarin</h5>
-                            <p style="color: #6c757d; font-size: 14px;">Learn the world's most spoken native language.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- ABOUT / CONTENT SECTION -->
-    <div id="about" style="padding: 80px 20px; background-color: #ffffff;">
+        style="padding: 90px 20px 70px 20px; background-color: #FBF3E3; position: relative; overflow: hidden;">
+        <svg width="0" height="0">
+            <defs></defs>
+        </svg>
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-4">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=700&q=80"
-                        class="img-fluid" style="border-radius: 12px;">
+                    <span class="badge-sketch"><i class="fa-solid fa-shop"></i> Odoo App Store Manager · 10 yrs</span>
+                    <h1 style="font-weight: 700; font-size: 48px; margin-top: 20px; margin-bottom: 18px;">
+                        I build Odoo modules people actually <span style="color:#714B67;">pay</span> for.
+                    </h1>
+                    <p style="font-size: 19px; color:#4a453f; margin-bottom: 30px;">
+                        From localization compliance to AI-powered add-ons — I design, build, and publish
+                        Odoo apps that solve real business pain, one sketch at a time.
+                    </p>
+                    <a href="#works" class="btn btn-sketchy btn-lg mr-2"><i class="fa-solid fa-cubes"></i> See My
+                        Modules</a>
+                    <a href="#contact" class="btn btn-lg dashed-box"
+                        style="color:#2E2A26; font-family:'Kalam',cursive; font-weight:700; padding: 10px 26px;"><i
+                            class="fa-solid fa-envelope"></i> Hire Me</a>
                 </div>
-                <div class="col-md-6">
-                    <h2 style="font-weight: 700; color: #1f2a44; margin-bottom: 20px;">Why Learn With Us?</h2>
-                    <p style="color: #6c757d; font-size: 16px; margin-bottom: 15px;">Our courses combine live tutors,
-                        interactive exercises, and real-world conversation practice so you actually remember what you
-                        learn.</p>
-                    <ul style="color: #6c757d; font-size: 16px; list-style: none; padding: 0;">
-                        <li style="margin-bottom: 12px;">✔ Native-speaking instructors</li>
-                        <li style="margin-bottom: 12px;">✔ Flexible, self-paced lessons</li>
-                        <li style="margin-bottom: 12px;">✔ Certificates on course completion</li>
-                        <li style="margin-bottom: 12px;">✔ Community practice groups</li>
-                    </ul>
+                <div class="col-md-6 text-center">
+                    <div class="sketchy-border" style="padding: 12px; display:inline-block; transform: rotate(-2deg);">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=650&q=80"
+                            style="width:100%; max-width: 420px; border-radius: 6px;" alt="Developer workspace">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- FAQ SECTION -->
-    <div id="faq" style="padding: 80px 20px; background-color: #f7f8fa;">
+    <!-- WAVY DIVIDER -->
+    <div class="divider-sketch">
+        <svg viewBox="0 0 1200 20" preserveAspectRatio="none" style="width:100%; height:20px;">
+            <path
+                d="M0,10 Q30,0 60,10 T120,10 T180,10 T240,10 T300,10 T360,10 T420,10 T480,10 T540,10 T600,10 T660,10 T720,10 T780,10 T840,10 T900,10 T960,10 T1020,10 T1080,10 T1140,10 T1200,10"
+                fill="none" stroke="#2E2A26" stroke-width="2" />
+        </svg>
+    </div>
+
+    <!-- CONTACT DETAILS -->
+    <div id="contact" style="padding: 70px 20px; background-color: #FFFDF8;">
+        <div class="container">
+            <h2 class="text-center section-title-underline" style="font-weight:700; margin-bottom: 45px;">
+                Let's Talk Shop
+            </h2>
+            <div class="row">
+                <div class="col-md-3 col-6 mb-4 text-center">
+                    <div class="icon-doodle mx-auto mb-2"><i class="fa-solid fa-phone"></i></div>
+                    <h5 class="sketchy-font">Phone</h5>
+                    <p style="color:#4a453f;">+91 7862001186</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4 text-center">
+                    <div class="icon-doodle mx-auto mb-2"><i class="fa-solid fa-envelope"></i></div>
+                    <h5 class="sketchy-font">Email</h5>
+                    <p style="color:#4a453f;">tank.manthan@gmail.com</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4 text-center">
+                    <div class="icon-doodle mx-auto mb-2"><i class="fa-solid fa-location-dot"></i></div>
+                    <h5 class="sketchy-font">Location</h5>
+                    <p style="color:#4a453f;">Rajkot, Gujarat, India</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4 text-center">
+                    <div class="icon-doodle mx-auto mb-2"><i class="fa-brands fa-linkedin-in"></i></div>
+                    <h5 class="sketchy-font">Socials</h5>
+                    <p style="color:#4a453f;">@tank_manthan_</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODULE DESCRIPTION -->
+    <div id="modules" style="padding: 80px 20px; background-color: #FBF3E3;">
+        <div class="container">
+            <h2 class="text-center" style="font-weight:700; margin-bottom: 8px;">What I Build</h2>
+            <p class="text-center" style="color:#4a453f; margin-bottom: 50px;">Five kinds of Odoo modules that actually
+                convert on the App Store.</p>
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+                    <div class="sketchy-border-2 p-4 h-100" style="transform: rotate(-1deg);">
+                        <div class="icon-doodle mb-3"><i class="fa-solid fa-earth-asia"></i></div>
+                        <h5 class="sketchy-font">Localization &amp; Compliance</h5>
+                        <p style="color:#4a453f;">E-invoicing, statutory tax reports and country-specific
+                            payment/shipping connectors businesses can't operate without.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="sketchy-border-2 p-4 h-100" style="transform: rotate(1deg);">
+                        <div class="icon-doodle mb-3"><i class="fa-solid fa-industry"></i></div>
+                        <h5 class="sketchy-font">Industry Verticals</h5>
+                        <p style="color:#4a453f;">Full workflow bundles for real estate, clinics, gyms, rentals —
+                            packaged as one purchase instead of scattered tweaks.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="sketchy-border-2 p-4 h-100" style="transform: rotate(-1deg);">
+                        <div class="icon-doodle mb-3"><i class="fa-solid fa-plug"></i></div>
+                        <h5 class="sketchy-font">Integration Connectors</h5>
+                        <p style="color:#4a453f;">WhatsApp, marketplaces, SMS gateways — connecting Odoo to tools people
+                            already refuse to give up.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="sketchy-border-2 p-4 h-100" style="transform: rotate(1deg);">
+                        <div class="icon-doodle mb-3"><i class="fa-solid fa-gauge-high"></i></div>
+                        <h5 class="sketchy-font">Productivity Add-ons</h5>
+                        <p style="color:#4a453f;">Approval flows, barcode &amp; mobile warehouse tools, custom
+                            dashboards — small price, high volume.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="sketchy-border-2 p-4 h-100" style="transform: rotate(-1deg);">
+                        <div class="icon-doodle mb-3"><i class="fa-solid fa-robot"></i></div>
+                        <h5 class="sketchy-font">AI-Layered Modules</h5>
+                        <p style="color:#4a453f;">Lead scoring, OCR invoice processing, and helpdesk chat — the most
+                            underserved and requested category right now.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="sketchy-border-2 p-4 h-100" style="transform: rotate(1deg);">
+                        <div class="icon-doodle mb-3"><i class="fa-solid fa-chart-line"></i></div>
+                        <h5 class="sketchy-font">Reporting &amp; BI</h5>
+                        <p style="color:#4a453f;">Advanced dashboards layered on standard modules, sold as a
+                            subscription instead of a one-time fee.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- WAVY DIVIDER -->
+    <div class="divider-sketch" style="background-color:#FFFDF8;">
+        <svg viewBox="0 0 1200 20" preserveAspectRatio="none" style="width:100%; height:20px;">
+            <path
+                d="M0,10 Q30,20 60,10 T120,10 T180,10 T240,10 T300,10 T360,10 T420,10 T480,10 T540,10 T600,10 T660,10 T720,10 T780,10 T840,10 T900,10 T960,10 T1020,10 T1080,10 T1140,10 T1200,10"
+                fill="none" stroke="#2E2A26" stroke-width="2" />
+        </svg>
+    </div>
+
+    <!-- MY WORKS ON ODOO APP STORE -->
+    <div id="works" style="padding: 80px 20px; background-color: #FFFDF8;">
+        <div class="container">
+            <h2 class="text-center" style="font-weight:700; margin-bottom: 8px;">My Works on the Odoo App Store</h2>
+            <p class="text-center" style="color:#4a453f; margin-bottom: 50px;">A few published modules and how they're
+                doing.</p>
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+                    <div class="polaroid" style="transform: rotate(-2deg);">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=500&q=80"
+                            style="width:100%; height:170px; object-fit:cover; border-radius:4px;">
+                        <h6 class="sketchy-font mt-3">GST E-Invoice Connector</h6>
+                        <p style="font-size:14px; color:#4a453f;">India compliance module, live invoice sync with IRP.
+                        </p>
+                        <span class="badge-sketch"><i class="fa-solid fa-star"></i> 4.8 · 1,200+ installs</span>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="polaroid" style="transform: rotate(1.5deg);">
+                        <img src="https://images.unsplash.com/photo-1611606063065-ee7946f0787a?auto=format&fit=crop&w=500&q=80"
+                            style="width:100%; height:170px; object-fit:cover; border-radius:4px;">
+                        <h6 class="sketchy-font mt-3">WhatsApp CRM Bridge</h6>
+                        <p style="font-size:14px; color:#4a453f;">Two-way WhatsApp messaging inside CRM &amp; Helpdesk.
+                        </p>
+                        <span class="badge-sketch"><i class="fa-solid fa-star"></i> 4.7 · 3,400+ installs</span>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="polaroid" style="transform: rotate(-1deg);">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=500&q=80"
+                            style="width:100%; height:170px; object-fit:cover; border-radius:4px;">
+                        <h6 class="sketchy-font mt-3">AI Invoice OCR</h6>
+                        <p style="font-size:14px; color:#4a453f;">Scans vendor bills and auto-fills draft invoices.</p>
+                        <span class="badge-sketch"><i class="fa-solid fa-star"></i> 4.9 · 900+ installs</span>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="polaroid" style="transform: rotate(1deg);">
+                        <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?auto=format&fit=crop&w=500&q=80"
+                            style="width:100%; height:170px; object-fit:cover; border-radius:4px;">
+                        <h6 class="sketchy-font mt-3">Clinic &amp; Vet Suite</h6>
+                        <p style="font-size:14px; color:#4a453f;">Appointments, prescriptions and billing for small
+                            clinics.</p>
+                        <span class="badge-sketch"><i class="fa-solid fa-star"></i> 4.6 · 650+ installs</span>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="polaroid" style="transform: rotate(-1.5deg);">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=500&q=80"
+                            style="width:100%; height:170px; object-fit:cover; border-radius:4px;">
+                        <h6 class="sketchy-font mt-3">Barcode Warehouse Mobile</h6>
+                        <p style="font-size:14px; color:#4a453f;">Faster picking &amp; packing from any handheld
+                            scanner.</p>
+                        <span class="badge-sketch"><i class="fa-solid fa-star"></i> 4.8 · 2,100+ installs</span>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="polaroid" style="transform: rotate(2deg);">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80"
+                            style="width:100%; height:170px; object-fit:cover; border-radius:4px;">
+                        <h6 class="sketchy-font mt-3">Marketplace Sync (Amazon)</h6>
+                        <p style="font-size:14px; color:#4a453f;">Orders, stock and pricing synced automatically.</p>
+                        <span class="badge-sketch"><i class="fa-solid fa-star"></i> 4.5 · 1,800+ installs</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div id="faq" style="padding: 80px 20px; background-color: #FBF3E3;">
         <div class="container" style="max-width: 800px;">
-            <h2 class="text-center" style="font-weight: 700; margin-bottom: 50px; color: #1f2a44;">Frequently Asked
-                Questions</h2>
+            <h2 class="text-center" style="font-weight: 700; margin-bottom: 50px;">
+                <i class="fa-solid fa-circle-question" style="color:#714B67;"></i> Frequently Asked Questions
+            </h2>
 
             <div id="faqAccordion">
 
-                <div class="card mb-3"
-                    style="border-radius: 10px; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-                    <div class="card-header" style="background-color: #ffffff; border-radius: 10px;">
+                <div class="dashed-box mb-3" style="background-color:#FFFDF8;">
+                    <div class="card-header" style="background-color: transparent; border: none;">
                         <a data-toggle="collapse" href="#faq1"
-                            style="display: block; color: #1f2a44; font-weight: 600; text-decoration: none;">How long
-                            does it take to become fluent?</a>
+                            style="display:block; color:#2E2A26; font-family:'Kalam',cursive; font-weight:700; text-decoration:none;">
+                            <i class="fa-solid fa-caret-right mr-1"></i> How long does it take to build a module?
+                        </a>
                     </div>
                     <div id="faq1" class="collapse" data-parent="#faqAccordion">
-                        <div class="card-body" style="color: #6c757d;">Most learners reach conversational fluency in 6
-                            to 12 months with consistent daily practice, depending on the language and your starting
-                            level.</div>
+                        <div class="card-body" style="color:#4a453f;">A simple connector takes 1-2 weeks. A full
+                            localization or industry suite usually takes 4-8 weeks including App Store review.</div>
                     </div>
                 </div>
 
-                <div class="card mb-3"
-                    style="border-radius: 10px; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-                    <div class="card-header" style="background-color: #ffffff; border-radius: 10px;">
+                <div class="dashed-box mb-3" style="background-color:#FFFDF8;">
+                    <div class="card-header" style="background-color: transparent; border: none;">
                         <a data-toggle="collapse" href="#faq2"
-                            style="display: block; color: #1f2a44; font-weight: 600; text-decoration: none;">Do I need
-                            any prior experience?</a>
+                            style="display:block; color:#2E2A26; font-family:'Kalam',cursive; font-weight:700; text-decoration:none;">
+                            <i class="fa-solid fa-caret-right mr-1"></i> Do you work with Community or Enterprise?
+                        </a>
                     </div>
                     <div id="faq2" class="collapse" data-parent="#faqAccordion">
-                        <div class="card-body" style="color: #6c757d;">No prior experience is needed. We offer beginner,
-                            intermediate, and advanced tracks for every language we teach.</div>
+                        <div class="card-body" style="color:#4a453f;">Both. Enterprise-only modules usually price higher
+                            since the buyer already has budget allocated.</div>
                     </div>
                 </div>
 
-                <div class="card mb-3"
-                    style="border-radius: 10px; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-                    <div class="card-header" style="background-color: #ffffff; border-radius: 10px;">
+                <div class="dashed-box mb-3" style="background-color:#FFFDF8;">
+                    <div class="card-header" style="background-color: transparent; border: none;">
                         <a data-toggle="collapse" href="#faq3"
-                            style="display: block; color: #1f2a44; font-weight: 600; text-decoration: none;">Can I learn
-                            on my phone?</a>
+                            style="display:block; color:#2E2A26; font-family:'Kalam',cursive; font-weight:700; text-decoration:none;">
+                            <i class="fa-solid fa-caret-right mr-1"></i> Can you maintain a module long-term?
+                        </a>
                     </div>
                     <div id="faq3" class="collapse" data-parent="#faqAccordion">
-                        <div class="card-body" style="color: #6c757d;">Yes, all lessons are fully responsive and work on
-                            desktop, tablet, and mobile devices.</div>
+                        <div class="card-body" style="color:#4a453f;">Yes, I offer subscription-based maintenance so
+                            your module stays compatible across Odoo version upgrades.</div>
                     </div>
                 </div>
 
-                <div class="card mb-3"
-                    style="border-radius: 10px; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-                    <div class="card-header" style="background-color: #ffffff; border-radius: 10px;">
+                <div class="dashed-box mb-3" style="background-color:#FFFDF8;">
+                    <div class="card-header" style="background-color: transparent; border: none;">
                         <a data-toggle="collapse" href="#faq4"
-                            style="display: block; color: #1f2a44; font-weight: 600; text-decoration: none;">Is there a
-                            free trial?</a>
+                            style="display:block; color:#2E2A26; font-family:'Kalam',cursive; font-weight:700; text-decoration:none;">
+                            <i class="fa-solid fa-caret-right mr-1"></i> How do you price a module?
+                        </a>
                     </div>
                     <div id="faq4" class="collapse" data-parent="#faqAccordion">
-                        <div class="card-body" style="color: #6c757d;">Every course includes a 7 day free trial, no
-                            credit card required to start.</div>
+                        <div class="card-body" style="color:#4a453f;">Usually a free "lite" tier plus a paid "pro" tier,
+                            priced monthly per company or per user depending on the module type.</div>
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </div>
+
+    <!-- FEEDBACK FORM -->
+    <div id="feedback" style="padding: 80px 20px; background-color: #FFFDF8;">
+        <div class="container" style="max-width: 700px;">
+            <div class="sketchy-border p-5" style="position: relative;">
+                <div class="tape"></div>
+                <h2 class="text-center sketchy-font" style="margin-bottom: 8px;">Got Feedback?</h2>
+                <p class="text-center" style="color:#4a453f; margin-bottom: 30px;">Tell me what module idea you're stuck
+                    on — I read every note.</p>
+                <form>
+                    <div class="form-group">
+                        <label class="sketchy-font"><i class="fa-solid fa-user"></i> Your Name</label>
+                        <input type="text" class="form-control form-control-sketch" placeholder="Jane Doe">
+                    </div>
+                    <div class="form-group">
+                        <label class="sketchy-font"><i class="fa-solid fa-envelope"></i> Your Email</label>
+                        <input type="email" class="form-control form-control-sketch" placeholder="jane@company.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="sketchy-font"><i class="fa-solid fa-star"></i> Rate My Work</label>
+                        <select class="form-control form-control-sketch">
+                            <option>★★★★★ Excellent</option>
+                            <option>★★★★ Good</option>
+                            <option>★★★ Average</option>
+                            <option>★★ Needs Work</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="sketchy-font"><i class="fa-solid fa-pen"></i> Your Message</label>
+                        <textarea class="form-control form-control-sketch" rows="4"
+                            placeholder="Write it like a sticky note..."></textarea>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-sketchy btn-lg"><i class="fa-solid fa-paper-plane"></i>
+                            Send Feedback</button>
+                    </div>
+                </form>
+            </div>
+            <div class="text-center mt-4">
+                <div class="stamp mx-auto"><i class="fa-solid fa-thumbtack"></i></div>
             </div>
         </div>
     </div>
 
     <!-- FOOTER -->
-    <footer style="background-color: #1f2a44; padding: 40px 20px; text-align: center;">
-        <p style="color: #ffffff; font-weight: 700; font-size: 20px; margin-bottom: 10px;">Lingua<span
-                style="color: #ffb347;">Hub</span></p>
-        <p style="color: #b7bfd1; font-size: 14px; margin-bottom: 10px;">Learn languages anytime, anywhere.</p>
-        <p style="color: #b7bfd1; font-size: 13px;">© 2026 LinguaHub. All rights reserved.</p>
+    <footer style="background-color: #2E2A26; padding: 40px 20px; text-align: center;">
+        <p class="sketchy-font" style="color: #ffffff; font-weight: 700; font-size: 20px; margin-bottom: 10px;">
+            Manthan<span style="color:#FFB74D;">.Odoo</span>
+        </p>
+        <p style="color: #cfc8bb; font-size: 14px; margin-bottom: 10px;">Sketching Odoo modules that actually sell.</p>
+        <p style="color: #cfc8bb; font-size: 13px;">© 2026 Tank Manthan. All rights reserved.</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
